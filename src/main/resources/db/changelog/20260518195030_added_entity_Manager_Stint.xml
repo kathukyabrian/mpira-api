@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="20260518195030" author="brian">
+        <createTable tableName="tbl_manager_stints">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="manager_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="club_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="start_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="signing_fee" type="double">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+        <addForeignKeyConstraint baseTableName="tbl_manager_stints" baseColumnNames="manager_id" constraintName="fk_manager_stint_manager" referencedTableName="tbl_managers"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="tbl_manager_stints" baseColumnNames="club_id" constraintName="fk_manager_stint_club" referencedTableName="tbl_clubs"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

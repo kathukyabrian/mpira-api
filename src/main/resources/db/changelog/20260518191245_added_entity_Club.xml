@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="20260518191245" author="brian">
+        <createTable tableName="tbl_clubs">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="establishment_year" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="home_ground" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="icon_url" type="varchar(500)"/>
+            <column name="league_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="manager_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="tbl_clubs" baseColumnNames="home_ground" constraintName="fk_club_home_ground" referencedTableName="tbl_stadiums"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="tbl_clubs" baseColumnNames="league_id" constraintName="fk_club_league_id" referencedTableName="tbl_leagues"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="tbl_clubs" baseColumnNames="manager_id" constraintName="fk_club_manager_id" referencedTableName="tbl_managers"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

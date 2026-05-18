@@ -4,4 +4,11 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
     <include file="db/changelog/20260518185539_added_entity_League.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518191023_added_entity_Stadium.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518191634_added_entity_Manager.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518191245_added_entity_Club.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518192206_added_entity_Player.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518193123_added_entity_Season.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518194610_added_entity_Player_Stint.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/20260518195030_added_entity_Manager_Stint.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>
