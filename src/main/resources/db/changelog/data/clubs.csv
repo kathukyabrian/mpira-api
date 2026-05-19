@@ -1,0 +1,19 @@
+id,name,description,establishment_year,home_ground,icon_url,league_id,manager_id
+1,AFC Leopards,Historic Kenyan club and one of the country’s most successful teams with a massive fanbase.,1964,2,https://upload.wikimedia.org/wikipedia/en/5/51/AFC_Leopards_SC_logo.png,1,1
+2,APS Bomet,Recently promoted side backed by the Administration Police Service.,2010,12,https://upload.wikimedia.org/wikipedia/commons/sample/aps_bomet.png,1,2
+3,Bandari,Coastal club sponsored by Kenya Ports Authority known for disciplined football.,1985,9,https://upload.wikimedia.org/wikipedia/en/7/72/Bandari_FC_logo.png,1,3
+4,Bidco United,Corporate-backed club associated with Bidco Africa.,2000,10,https://upload.wikimedia.org/wikipedia/en/sample/bidco_united.png,1,4
+5,Gor Mahia,Kenya’s most decorated football club and a regional powerhouse.,1968,2,https://upload.wikimedia.org/wikipedia/en/5/50/Gor_Mahia_logo.png,1,5
+6,Kakamega Homeboyz,Western Kenya club known for youth development and competitive performances.,2010,18,https://upload.wikimedia.org/wikipedia/en/sample/homeboyz.png,1,6
+7,Kariobangi Sharks,Nairobi-based club recognized for nurturing young talent.,2000,11,https://upload.wikimedia.org/wikipedia/en/sample/kariobangi_sharks.png,1,7
+8,KCB,Club owned by Kenya Commercial Bank with strong financial backing.,1993,14,https://upload.wikimedia.org/wikipedia/en/sample/kcb_fc.png,1,8
+9,Kenya Police FC,Police service-backed club that has rapidly risen in Kenyan football.,2014,4,https://upload.wikimedia.org/wikipedia/en/sample/kenya_police_fc.png,1,9
+10,Mara Sugar,Sugar company-sponsored club from Migori County.,2011,13,https://upload.wikimedia.org/wikipedia/en/sample/mara_sugar.png,1,10
+11,Mathare United,Community-focused Nairobi club famous for youth empowerment.,1994,3,https://upload.wikimedia.org/wikipedia/en/8/8d/Mathare_United_logo.png,1,11
+12,Murang'a Seal,Central Kenya club that recently established itself in the top flight.,2016,15,https://upload.wikimedia.org/wikipedia/en/sample/muranga_seal.png,1,12
+13,Nairobi United,Ambitious Nairobi-based club climbing through Kenyan football ranks.,2010,3,https://upload.wikimedia.org/wikipedia/en/sample/nairobi_united.png,1,13
+14,Posta Rangers,Postal Corporation-sponsored club with long-standing league presence.,2001,11,https://upload.wikimedia.org/wikipedia/en/sample/posta_rangers.png,1,14
+15,Shabana,Kisii-based club with one of the most passionate fanbases in Kenya.,1982,7,https://upload.wikimedia.org/wikipedia/en/sample/shabana_fc.png,1,15
+16,Sofapaka,Club founded by a church community and known for quick rise to success.,2004,3,https://upload.wikimedia.org/wikipedia/en/0/0a/Sofapaka_FC_logo.png,1,16
+17,Tusker,Brewery-sponsored club and multiple-time Kenyan champions.,1969,14,https://upload.wikimedia.org/wikipedia/en/0/0c/Tusker_FC_logo.png,1,17
+18,Ulinzi Stars,Kenya Defence Forces club famous for tactical discipline.,1995,5,https://upload.wikimedia.org/wikipedia/en/sample/ulinzi_stars.png,1,18

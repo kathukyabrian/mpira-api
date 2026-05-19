@@ -1,6 +1,19 @@
 id,name,icon_url,date_of_birth,country
-1,Charles Akonnor,https://share.google/OEi33pZDitnDxkKbz,1974-03-12,Ghana
-2,Dusan Stojanovic,https://img.a.transfermarkt.technology/portrait/header/106116-1759221972.jpg?lm=1,1981-09-05,Serbia
-3,Charles Okere,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP2BVDDmF7sr5WFl-wfRcCBoevNlfCkizhMDPbhWPicpCuZ_L4NVatzeRmQkkOBTs-9UvAgEQztB1WzU0m_pIVMxit4fVtKnYRisD5X32v&s=10',1981-04-23,Kenya
-4,Fred Ambani,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1NAfyxYSMhsQtAuHW2w_Jpl7Z0bpSsnZNKXEMVtXli6Bv-dzHk9BFt8R1iX1g9aFUxOhBORHMpAwBBTzishu69_UvKT14nSJ7APB2Z6_iCg&s=10',1977-01-01,Kenya
-5,Robert Matano,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShwRFXeHtiaEibdFH4GDLOugYSZ8gz5CFN8jvaP_kMFKARKm_tx01LO9jv0jTyTAuuyV6Il2NKCwalitPGj2d0dmDyvS0su6TA5wavJGdx&s=10',1964-06-04,Kenya
+1,Fred Ambani,https://upload.wikimedia.org/wikipedia/commons/sample/fred_ambani.jpg,1977-06-27,Kenya
+2,Sammy Omollo,https://upload.wikimedia.org/wikipedia/commons/sample/sammy_omollo.jpg,1967-05-09,Kenya
+3,Bernard Mwalala,https://upload.wikimedia.org/wikipedia/commons/sample/bernard_mwalala.jpg,1984-06-25,Kenya
+4,Anthony Akhulia,https://upload.wikimedia.org/wikipedia/commons/sample/anthony_akhulia.jpg,1980-01-01,Kenya
+5,Charles Akonnor,https://upload.wikimedia.org/wikipedia/commons/0/0d/Charles_Akonnor.jpg,1974-03-12,Ghana
+6,Patrick Odhiambo,https://upload.wikimedia.org/wikipedia/commons/sample/patrick_odhiambo.jpg,1985-01-01,Kenya
+7,William Muluya,https://upload.wikimedia.org/wikipedia/commons/sample/william_muluya.jpg,1981-01-01,Kenya
+8,Robert Matano,https://upload.wikimedia.org/wikipedia/commons/sample/robert_matano.jpg,1964-09-25,Kenya
+9,Nicholas Muyoti,https://upload.wikimedia.org/wikipedia/commons/sample/nicholas_muyoti.jpg,1976-09-08,Kenya
+10,Edward Manoah,https://upload.wikimedia.org/wikipedia/commons/sample/edward_manoah.jpg,1980-01-01,Ghana
+11,John Kamau,https://upload.wikimedia.org/wikipedia/commons/sample/john_kamau.jpg,1979-01-01,Kenya
+12,Osborne Monday,https://upload.wikimedia.org/wikipedia/commons/sample/osborne_monday.jpg,1980-01-01,Nigeria
+13,Godfrey Oduor,https://upload.wikimedia.org/wikipedia/commons/sample/godfrey_odour.jpg,1980-01-01,Kenya
+14,Collins Omondi,https://upload.wikimedia.org/wikipedia/commons/sample/collins_omondi.jpg,1980-01-01,Kenya
+15,Peter Okidi,https://upload.wikimedia.org/wikipedia/commons/sample/peter_okidi.jpg,1980-01-01,Kenya
+16,Ezekiel Akwana,https://upload.wikimedia.org/wikipedia/commons/sample/ezekiel_akwana.jpg,1977-01-01,Kenya
+17,Julien Mette,https://upload.wikimedia.org/wikipedia/commons/sample/julien_mette.jpg,1982-11-22,France
+18,Stephen Ochola,https://upload.wikimedia.org/wikipedia/commons/sample/stephen_ochola.jpg,1980-01-01,Kenya

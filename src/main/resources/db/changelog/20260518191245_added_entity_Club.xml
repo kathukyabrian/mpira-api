@@ -36,4 +36,7 @@
         <addForeignKeyConstraint baseTableName="tbl_clubs" baseColumnNames="manager_id" constraintName="fk_club_manager_id" referencedTableName="tbl_managers"
                                  referencedColumnNames="id"/>
     </changeSet>
+    <changeSet id="20260519114831" author="brian">
+        <loadData tableName="tbl_clubs" file="db/changelog/data/clubs.csv" separator="," relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>

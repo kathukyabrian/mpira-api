@@ -16,4 +16,7 @@
             </column>
         </createTable>
     </changeSet>
+    <changeSet id="20260519113327" author="brian">
+        <loadData tableName="tbl_stadiums" file="db/changelog/data/stadiums.csv" separator="," relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>
