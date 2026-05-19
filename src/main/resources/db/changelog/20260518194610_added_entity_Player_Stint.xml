@@ -33,4 +33,7 @@
         <addForeignKeyConstraint baseTableName="tbl_player_stints" baseColumnNames="club_id" constraintName="fk_player_stint_club" referencedTableName="tbl_clubs"
                                  referencedColumnNames="id"/>
     </changeSet>
+    <changeSet id="20250519143609" author="brian">
+        <dropNotNullConstraint tableName="tbl_player_stints" columnName="end_date"/>
+    </changeSet>
 </databaseChangeLog>

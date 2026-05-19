@@ -30,4 +30,10 @@
         <addForeignKeyConstraint baseTableName="tbl_manager_stints" baseColumnNames="club_id" constraintName="fk_manager_stint_club" referencedTableName="tbl_clubs"
                                  referencedColumnNames="id"/>
     </changeSet>
+    <changeSet id="20260519143425" author="brian">
+        <dropNotNullConstraint tableName="tbl_manager_stints" columnName="end_date"/>
+    </changeSet>
+    <changeSet id="20260519145625" author="brian">
+        <loadData tableName="tbl_manager_stints" file="db/changelog/data/manager-stints.csv" separator="," relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>
