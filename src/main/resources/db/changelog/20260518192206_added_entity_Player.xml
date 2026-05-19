@@ -34,4 +34,7 @@
         <addForeignKeyConstraint baseTableName="tbl_players" baseColumnNames="current_club" constraintName="fk_player_club" referencedTableName="tbl_clubs"
                                  referencedColumnNames="id"/>
     </changeSet>
+    <changeSet id="20260519171018" author="brian">
+        <loadData tableName="tbl_players" file="db/changelog/data/players/afc.csv" separator=","  relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>

@@ -36,4 +36,7 @@
     <changeSet id="20250519143609" author="brian">
         <dropNotNullConstraint tableName="tbl_player_stints" columnName="end_date"/>
     </changeSet>
+    <changeSet id="20260519172912" author="brian">
+        <loadData tableName="tbl_player_stints" file="db/changelog/data/players/afc-stint-1.csv" separator=","  relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>
