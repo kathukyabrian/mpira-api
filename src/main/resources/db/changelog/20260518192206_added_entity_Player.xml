@@ -37,4 +37,7 @@
     <changeSet id="20260519171018" author="brian">
         <loadData tableName="tbl_players" file="db/changelog/data/players/afc.csv" separator=","  relativeToChangelogFile="false"/>
     </changeSet>
+    <changeSet id="20260519220110" author="brian">
+        <loadData tableName="tbl_players" file="db/changelog/data/players/gor.csv" separator=","  relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>
