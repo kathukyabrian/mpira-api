@@ -22,4 +22,7 @@
         <addForeignKeyConstraint baseTableName="tbl_seasons" baseColumnNames="league_id" constraintName="fk_season_league" referencedTableName="tbl_leagues"
                                  referencedColumnNames="id"/>
     </changeSet>
+    <changeSet id="20260519120000" author="brian">
+        <loadData tableName="tbl_seasons" file="db/changelog/data/seasons.csv" separator=","  relativeToChangelogFile="false"/>
+    </changeSet>
 </databaseChangeLog>
