@@ -39,4 +39,9 @@
     <changeSet id="20260519114831" author="brian">
         <loadData tableName="tbl_clubs" file="db/changelog/data/clubs.csv" separator="," relativeToChangelogFile="false"/>
     </changeSet>
+    <changeSet id="20260520194638" author="brian">
+        <createIndex tableName="tbl_clubs" indexName="idx_club_league_id">
+            <column name="league_id"/>
+        </createIndex>
+    </changeSet>
 </databaseChangeLog>

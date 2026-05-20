@@ -25,4 +25,11 @@
     <changeSet id="20260519120000" author="brian">
         <loadData tableName="tbl_seasons" file="db/changelog/data/seasons.csv" separator=","  relativeToChangelogFile="false"/>
     </changeSet>
+    <changeSet id="20260520195034" author="brian">
+        <createIndex tableName="tbl_seasons" indexName="idx_season_league_id_start_year_end_year">
+            <column name="league_id"/>
+            <column name="start_year"/>
+            <column name="end_year"/>
+        </createIndex>
+    </changeSet>
 </databaseChangeLog>

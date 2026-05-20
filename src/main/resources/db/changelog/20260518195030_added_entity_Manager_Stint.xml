@@ -36,4 +36,13 @@
     <changeSet id="20260519145625" author="brian">
         <loadData tableName="tbl_manager_stints" file="db/changelog/data/manager-stints.csv" separator="," relativeToChangelogFile="false"/>
     </changeSet>
+
+    <changeSet id="20260520195424" author="brian">
+        <createIndex tableName="tbl_manager_stints" indexName="idx_manager_stint_manager_id">
+            <column name="manager_id"/>
+        </createIndex>
+        <createIndex tableName="tbl_manager_stints" indexName="idx_manager_stint_club_id">
+            <column name="club_id"/>
+        </createIndex>
+    </changeSet>
 </databaseChangeLog>

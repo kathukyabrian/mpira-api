@@ -51,4 +51,12 @@
             <column name="active" type="boolean" defaultValueBoolean="true"/>
         </addColumn>
     </changeSet>
+    <changeSet id="20260520195234" author="brian">
+        <createIndex tableName="tbl_player_stints" indexName="idx_player_stint_player_id">
+            <column name="player_id"/>
+        </createIndex>
+        <createIndex tableName="tbl_player_stints" indexName="idx_player_stint_club_id">
+            <column name="club_id"/>
+        </createIndex>
+    </changeSet>
 </databaseChangeLog>
