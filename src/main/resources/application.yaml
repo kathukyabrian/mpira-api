@@ -2,7 +2,7 @@ spring:
   application:
     name: api
   datasource:
-    url: jdbc:postgresql://${DB_HOST:139.162.165.30}:${DB_PORT:15432}/${DB_NAME:mpira}?socketTimeout=30&connectTimeout=10&tcpKeepAlive=true
+    url: jdbc:postgresql://${DB_HOST:127.0.0.1}:${DB_PORT:5432}/${DB_NAME:mpira}?socketTimeout=30&connectTimeout=10&tcpKeepAlive=true
     username: ${DB_USERNAME:mpira}
     password: ${DB_PASSWORD:mpira2026}
     driver-class-name: org.postgresql.Driver

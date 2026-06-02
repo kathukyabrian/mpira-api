@@ -23,7 +23,6 @@ public class LeagueService {
         this.leagueRepository = leagueRepository;
     }
 
-    // filter
     public Page<League> filter(String name, LeagueLevel level, Pageable pageable) {
         log.debug("Request to filter leagues by name: {}, level: {}", name, level);
 
@@ -38,11 +37,10 @@ public class LeagueService {
         return leagueRepository.findAll(example, pageable);
     }
 
-    // find one by id
     public League findOne(Long id) {
         log.debug("Request to find league by id: {}", id);
         return leagueRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("League with id " + id + " does not exist"));
+                .orElseThrow(() -> new EntityNotFoundException("League", id));
     }
 
     private League getProbe(String name, LeagueLevel level) {

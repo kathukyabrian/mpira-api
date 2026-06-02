@@ -4,6 +4,10 @@ public class EntityNotFoundException extends RuntimeException {
     public EntityNotFoundException() {
     }
 
+    public EntityNotFoundException(String entity, Object id) {
+        super(entity + " with id '" + id + "' does not exist");
+    }
+
     public EntityNotFoundException(String message) {
         super(message);
     }
