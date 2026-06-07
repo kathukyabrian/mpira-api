@@ -33,5 +33,5 @@ public class Club {
 
     @ManyToOne
     @JoinColumn(name = "manager_id")
-    private Manager managerId;
+    private Manager manager;
 }
