@@ -2,7 +2,6 @@ package tech.kitucode.mpira.api.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import tech.kitucode.mpira.api.domain.enumerations.ContractType;
 
 import java.time.LocalDate;
 
