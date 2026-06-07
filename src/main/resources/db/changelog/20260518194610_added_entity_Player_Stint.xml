@@ -26,7 +26,6 @@
             <column name="contract_type" type="varchar(20)">
                 <constraints nullable="false"/>
             </column>
-
         </createTable>
         <addForeignKeyConstraint baseTableName="tbl_player_stints" baseColumnNames="player_id"
                                  constraintName="fk_player_stint_player" referencedTableName="tbl_players"
