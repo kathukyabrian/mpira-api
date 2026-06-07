@@ -11,17 +11,21 @@ import tech.kitucode.mpira.api.domain.Player;
 import tech.kitucode.mpira.api.domain.enumerations.PlayerPosition;
 import tech.kitucode.mpira.api.error.EntityNotFoundException;
 import tech.kitucode.mpira.api.repository.PlayerRepository;
+import tech.kitucode.mpira.api.service.dto.PlayerDTO;
+import tech.kitucode.mpira.api.service.mapper.PlayerMapper;
 
 @Slf4j
 @Service
 public class PlayerService {
     private final PlayerRepository playerRepository;
+    private final PlayerMapper playerMapper;
 
-    public PlayerService(PlayerRepository playerRepository) {
+    public PlayerService(PlayerRepository playerRepository, PlayerMapper playerMapper) {
         this.playerRepository = playerRepository;
+        this.playerMapper = playerMapper;
     }
 
-    public Page<Player> filter(String name, String country, Long clubId, PlayerPosition position, Integer jerseyNumber, String alumni, Pageable pageable) {
+    public Page<PlayerDTO> filter(String name, String country, Long clubId, PlayerPosition position, Integer jerseyNumber, String alumni, Pageable pageable) {
         log.debug("Request to filter players given name: {}, country: {}, clubId: {}, position:{}, jersey: {}, alumni: {}",
                 name, country, clubId, position, jerseyNumber, alumni);
         Player probe = getProbe(name, country, clubId, position, jerseyNumber, alumni);
@@ -29,13 +33,14 @@ public class PlayerService {
                 .withIgnoreCase()
                 .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
         Example<Player> example = Example.of(probe, matcher);
-        return playerRepository.findAll(example, pageable);
+        return playerRepository.findAll(example, pageable).map(playerMapper::toDTO);
     }
 
-    public Player findOne(Long id) {
+    public PlayerDTO findOne(Long id) {
         log.debug("Request to find player given id: {}", id);
-        return playerRepository.findById(id)
+        Player player = playerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Player", id));
+        return playerMapper.toDTO(player);
     }
 
 

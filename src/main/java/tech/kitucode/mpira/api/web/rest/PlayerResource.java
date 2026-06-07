@@ -7,9 +7,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tech.kitucode.mpira.api.domain.Player;
 import tech.kitucode.mpira.api.domain.enumerations.PlayerPosition;
 import tech.kitucode.mpira.api.service.PlayerService;
+import tech.kitucode.mpira.api.service.dto.PlayerDTO;
 import tech.kitucode.mpira.api.web.util.PaginationUtil;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public class PlayerResource {
     }
 
     @GetMapping
-    public ResponseEntity<List<Player>> filter(
+    public ResponseEntity<List<PlayerDTO>> filter(
             @RequestParam(name = "name", required = false) String name,
             @RequestParam(name = "country", required = false) String country,
             @RequestParam(name = "clubId", required = false) Long clubId,
@@ -36,15 +36,15 @@ public class PlayerResource {
     ) {
         log.debug("REST Request to filter players given name: {}, country: {}, clubId: {}, position:{}, jersey: {}, alumni: {}",
                 name, country, clubId, position, jersey, alumni);
-        Page<Player> page = playerService.filter(name, country, clubId, position, jersey, alumni, pageable);
+        Page<PlayerDTO> page = playerService.filter(name, country, clubId, position, jersey, alumni, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/players");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Player> findOne(@PathVariable Long id) {
+    public ResponseEntity<PlayerDTO> findOne(@PathVariable Long id) {
         log.debug("REST request to find player by id: {}", id);
-        Player player = playerService.findOne(id);
+        PlayerDTO player = playerService.findOne(id);
         return ResponseEntity.ok(player);
     }
 }

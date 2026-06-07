@@ -36,7 +36,6 @@ public class ClubService {
                 .orElseThrow(() -> new EntityNotFoundException("Club", id));
     }
 
-
     private Club getProbe(String name, Long leagueId, Integer established) {
         Club club = new Club();
 
