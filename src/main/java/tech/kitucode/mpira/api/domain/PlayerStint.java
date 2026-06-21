@@ -17,8 +17,9 @@ public class PlayerStint {
     @Column(name = "player_id")
     private Long playerId;
 
-    @Column(name = "club_id")
-    private Long clubId;
+    @ManyToOne
+    @JoinColumn(name = "club_id")
+    private Club club;
 
     @Column(name = "start_date")
     private LocalDate startDate;

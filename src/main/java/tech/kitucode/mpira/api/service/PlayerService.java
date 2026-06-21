@@ -11,18 +11,24 @@ import tech.kitucode.mpira.api.domain.Player;
 import tech.kitucode.mpira.api.domain.enumerations.PlayerPosition;
 import tech.kitucode.mpira.api.error.EntityNotFoundException;
 import tech.kitucode.mpira.api.repository.PlayerRepository;
-import tech.kitucode.mpira.api.service.dto.PlayerDTO;
+import tech.kitucode.mpira.api.service.dto.player.PlayerDTO;
+import tech.kitucode.mpira.api.service.dto.player.PlayerStintDTO;
+import tech.kitucode.mpira.api.service.dto.player.PlayerWithStintDTO;
 import tech.kitucode.mpira.api.service.mapper.PlayerMapper;
+
+import java.util.List;
 
 @Slf4j
 @Service
 public class PlayerService {
     private final PlayerRepository playerRepository;
     private final PlayerMapper playerMapper;
+    private final PlayerStintService playerStintService;
 
-    public PlayerService(PlayerRepository playerRepository, PlayerMapper playerMapper) {
+    public PlayerService(PlayerRepository playerRepository, PlayerMapper playerMapper, PlayerStintService playerStintService) {
         this.playerRepository = playerRepository;
         this.playerMapper = playerMapper;
+        this.playerStintService = playerStintService;
     }
 
     public Page<PlayerDTO> filter(String name, String country, Long clubId, PlayerPosition position, Integer jerseyNumber, String alumni, Pageable pageable) {
@@ -36,11 +42,12 @@ public class PlayerService {
         return playerRepository.findAll(example, pageable).map(playerMapper::toDTO);
     }
 
-    public PlayerDTO findOne(Long id) {
+    public PlayerWithStintDTO findOne(Long id) {
         log.debug("Request to find player given id: {}", id);
         Player player = playerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Player", id));
-        return playerMapper.toDTO(player);
+        List<PlayerStintDTO> stints = playerStintService.findByPlayerId(id);
+        return playerMapper.toPlayerWithStintDTO(player, stints);
     }
 
 

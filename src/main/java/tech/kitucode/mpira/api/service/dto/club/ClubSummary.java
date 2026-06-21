@@ -1,4 +1,4 @@
-package tech.kitucode.mpira.api.service.dto;
+package tech.kitucode.mpira.api.service.dto.club;
 
 public record ClubSummary(
         Long id,
