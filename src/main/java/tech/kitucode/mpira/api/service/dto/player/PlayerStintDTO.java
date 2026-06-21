@@ -13,15 +13,5 @@ public record PlayerStintDTO(
         ContractType contractType,
         Boolean active,
         ClubDTO club
-) { }
-
-/**
-
- *
- *     @Column(name = "player_id")
- *     private Long playerId;
- *
- *     @Column(name = "club_id")
- *     private Long clubId;
- *
- */
+) {
+}
