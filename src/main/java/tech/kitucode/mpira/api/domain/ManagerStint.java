@@ -16,8 +16,9 @@ public class ManagerStint {
     @Column(name = "manager_id")
     private Long managerId;
 
-    @Column(name = "club_id")
-    private Long clubId;
+    @ManyToOne
+    @JoinColumn(name = "club_id")
+    private Club club;
 
     @Column(name = "start_date")
     private LocalDate startDate;
@@ -27,4 +28,7 @@ public class ManagerStint {
 
     @Column(name = "signing_fee")
     private Double signingFee;
+
+    @Column(name = "active")
+    private Boolean active;
 }

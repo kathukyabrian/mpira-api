@@ -23,6 +23,9 @@
             <column name="signing_fee" type="double">
                 <constraints nullable="true"/>
             </column>
+            <column name="active" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
 
         </createTable>
         <addForeignKeyConstraint baseTableName="tbl_manager_stints" baseColumnNames="manager_id" constraintName="fk_manager_stint_manager" referencedTableName="tbl_managers"

@@ -7,16 +7,26 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import tech.kitucode.mpira.api.domain.Manager;
+import tech.kitucode.mpira.api.domain.ManagerStint;
 import tech.kitucode.mpira.api.error.EntityNotFoundException;
 import tech.kitucode.mpira.api.repository.ManagerRepository;
+import tech.kitucode.mpira.api.service.dto.manager.ManagerDTO;
+import tech.kitucode.mpira.api.service.dto.manager.ManagerStintDTO;
+import tech.kitucode.mpira.api.service.mapper.ManagerMapper;
+
+import java.util.List;
 
 @Slf4j
 @Service
 public class ManagerService {
     private final ManagerRepository managerRepository;
+    private final ManagerStintService managerStintService;
+    private final ManagerMapper managerMapper;
 
-    public ManagerService(ManagerRepository managerRepository) {
+    public ManagerService(ManagerRepository managerRepository, ManagerStintService managerStintService, ManagerMapper managerMapper) {
         this.managerRepository = managerRepository;
+        this.managerStintService = managerStintService;
+        this.managerMapper = managerMapper;
     }
 
     // filter
@@ -31,10 +41,12 @@ public class ManagerService {
     }
 
     // find one by id
-    public Manager findOne(Long id) {
+    public ManagerDTO findOne(Long id) {
         log.debug("Request to find manager by id: {}", id);
-        return managerRepository.findById(id)
+        Manager manager =  managerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Manager", id));
+        List<ManagerStintDTO> stints = managerStintService.findByManagerId(id);
+        return managerMapper.toDTO(manager, stints);
     }
 
     private Manager getProbe(String name, String country) {

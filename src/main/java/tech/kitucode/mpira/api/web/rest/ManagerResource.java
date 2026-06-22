@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tech.kitucode.mpira.api.domain.Manager;
 import tech.kitucode.mpira.api.service.ManagerService;
+import tech.kitucode.mpira.api.service.dto.manager.ManagerDTO;
 import tech.kitucode.mpira.api.web.util.PaginationUtil;
 
 import java.util.List;
@@ -36,9 +37,9 @@ public class ManagerResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Manager> findOne(@PathVariable Long id) {
+    public ResponseEntity<ManagerDTO> findOne(@PathVariable Long id) {
         log.debug("REST request to find manager by id: {}", id);
-        Manager manager = managerService.findOne(id);
+        ManagerDTO manager = managerService.findOne(id);
         return ResponseEntity.ok(manager);
     }
 }
