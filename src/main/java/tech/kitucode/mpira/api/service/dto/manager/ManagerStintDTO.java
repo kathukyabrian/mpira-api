@@ -1,6 +1,5 @@
 package tech.kitucode.mpira.api.service.dto.manager;
 
-import tech.kitucode.mpira.api.domain.enumerations.ContractType;
 import tech.kitucode.mpira.api.service.dto.club.ClubDTO;
 
 import java.time.LocalDate;

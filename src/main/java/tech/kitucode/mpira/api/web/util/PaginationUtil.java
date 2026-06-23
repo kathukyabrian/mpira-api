@@ -5,7 +5,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.util.UriComponentsBuilder;
 
 public class PaginationUtil {
-    public static HttpHeaders generatePaginationHttpHeaders(Page page, String baseUrl) {
+    public static HttpHeaders generatePaginationHttpHeaders(Page<?> page, String baseUrl) {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("X-Total-Items", String.valueOf(page.getTotalElements()));
 

@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import tech.kitucode.mpira.api.domain.Manager;
-import tech.kitucode.mpira.api.domain.ManagerStint;
 import tech.kitucode.mpira.api.error.EntityNotFoundException;
 import tech.kitucode.mpira.api.repository.ManagerRepository;
 import tech.kitucode.mpira.api.service.dto.manager.ManagerDTO;
