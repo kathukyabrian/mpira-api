@@ -5,9 +5,7 @@ import tech.kitucode.mpira.api.domain.Manager;
 import tech.kitucode.mpira.api.domain.Player;
 import tech.kitucode.mpira.api.service.dto.manager.ManagerDTO;
 import tech.kitucode.mpira.api.service.dto.manager.ManagerStintDTO;
-import tech.kitucode.mpira.api.service.dto.player.PlayerDTO;
 import tech.kitucode.mpira.api.service.dto.player.PlayerStintDTO;
-import tech.kitucode.mpira.api.service.dto.player.PlayerWithStintDTO;
 
 import java.util.List;
 

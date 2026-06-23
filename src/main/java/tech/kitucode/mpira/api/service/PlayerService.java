@@ -13,7 +13,6 @@ import tech.kitucode.mpira.api.error.EntityNotFoundException;
 import tech.kitucode.mpira.api.repository.PlayerRepository;
 import tech.kitucode.mpira.api.service.dto.player.PlayerDTO;
 import tech.kitucode.mpira.api.service.dto.player.PlayerStintDTO;
-import tech.kitucode.mpira.api.service.dto.player.PlayerWithStintDTO;
 import tech.kitucode.mpira.api.service.mapper.PlayerMapper;
 
 import java.util.List;
@@ -39,15 +38,15 @@ public class PlayerService {
                 .withIgnoreCase()
                 .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
         Example<Player> example = Example.of(probe, matcher);
-        return playerRepository.findAll(example, pageable).map(playerMapper::toDTO);
+        return playerRepository.findAll(example, pageable).map(player -> playerMapper.toDTO(player, null));
     }
 
-    public PlayerWithStintDTO findOne(Long id) {
+    public PlayerDTO findOne(Long id) {
         log.debug("Request to find player given id: {}", id);
         Player player = playerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Player", id));
         List<PlayerStintDTO> stints = playerStintService.findByPlayerId(id);
-        return playerMapper.toPlayerWithStintDTO(player, stints);
+        return playerMapper.toDTO(player, stints);
     }
 
 

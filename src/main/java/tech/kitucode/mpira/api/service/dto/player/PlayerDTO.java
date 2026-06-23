@@ -4,6 +4,7 @@ import tech.kitucode.mpira.api.domain.enumerations.PlayerPosition;
 import tech.kitucode.mpira.api.service.dto.club.ClubSummary;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public record PlayerDTO(
         Long id,
@@ -14,7 +15,8 @@ public record PlayerDTO(
         ClubSummary club,
         PlayerPosition position,
         Integer jerseyNumber,
-        String alumni
+        String alumni,
+        List<PlayerStintDTO> stints
 ) {
 }
 

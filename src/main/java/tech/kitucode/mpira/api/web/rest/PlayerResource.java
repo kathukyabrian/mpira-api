@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import tech.kitucode.mpira.api.domain.enumerations.PlayerPosition;
 import tech.kitucode.mpira.api.service.PlayerService;
 import tech.kitucode.mpira.api.service.dto.player.PlayerDTO;
-import tech.kitucode.mpira.api.service.dto.player.PlayerWithStintDTO;
 import tech.kitucode.mpira.api.web.util.PaginationUtil;
 
 import java.util.List;
@@ -43,9 +42,9 @@ public class PlayerResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PlayerWithStintDTO> findOne(@PathVariable Long id) {
+    public ResponseEntity<PlayerDTO> findOne(@PathVariable Long id) {
         log.debug("REST request to find player by id: {}", id);
-        PlayerWithStintDTO player = playerService.findOne(id);
+        PlayerDTO player = playerService.findOne(id);
         return ResponseEntity.ok(player);
     }
 }
